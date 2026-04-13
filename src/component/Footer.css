@@ -1,0 +1,90 @@
+.footer {
+  Background: #111;
+  Color: #ccc;
+  Margin-top: 80px;
+  Padding-top: 60px;
+  Font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  Max-width: 1200px;
+  Margin: 0 auto;
+  Padding: 0 20px;
+}
+
+.footer-grid {
+  Display: grid;
+  Grid-template-columns: repeat(4, 1fr);
+  Gap: 40px;
+  Margin-bottom: 50px;
+}
+
+.footer-brand h2 {
+  Color: #818cf8;
+  Font-size: 28px;
+  Margin-bottom: 15px;
+}
+
+.footer-brand p {
+  Font-size: 14px;
+  Line-height: 1.6;
+  Color: #aaa;
+}
+
+.footer-links h3 {
+  Color: white;
+  Margin-bottom: 20px;
+  Font-size: 18px;
+}
+
+.footer-links ul {
+  List-style: none;
+  Padding: 0;
+}
+
+.footer-links li {
+  Margin-bottom: 10px;
+}
+
+.footer-links a {
+  Color: #aaa;
+  Text-decoration: none;
+  Transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  Color: #818cf8;
+}
+
+.footer-contact h3 {
+  Color: white;
+  Margin-bottom: 20px;
+  Font-size: 18px;
+}
+
+.footer-contact p {
+  Margin: 10px 0;
+  Font-size: 14px;
+  Color: #aaa;
+}
+
+.footer-bottom {
+  Text-align: center;
+  Padding-top: 30px;
+  Border-top: 1px solid #333;
+  Color: #777;
+  Font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-grid {
+    Grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    Grid-template-columns: 1fr;
+  }
+}
