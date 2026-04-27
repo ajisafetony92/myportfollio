@@ -1,0 +1,116 @@
+/* Auth page styles */ 
+.auth-container input {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.auth-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.auth-container input:focus {
+  border-color: #a78bfa;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
+  transform: scale(1.02);
+}
+.auth-container input:focus {
+  border-color: #a78bfa;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
+  transform: scale(1.02);
+}
+.auth-container button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #a78bfa, #667eea);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(103, 126, 234, 0.4);
+}
+.auth-container button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #5b21b6);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(91, 33, 182, 0.5);
+}
+.auth-container button:active {
+  transform: translateY(1px);
+}
+@media (max-width: 480px) {
+  .auth-container form {
+    padding: 30px;
+  }
+  .auth-container h2 {
+    font-size: 2rem;
+  }
+}
+.auth-container input, .auth-container input::placeholder {
+  color: white !important;
+}
+
+.auth-container input {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.auth-container p {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-container a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+.error-message, .auth-container p[style*="color: red"] {
+  color: #ff6b6b !important;
+  margin-top: 10px;
+  text-align: center;
+}
+.auth-container input, .auth-container input::placeholder {
+  color: white !important;
+}
+
+.auth-container input {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.auth-container p {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-container a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+.error-message, .auth-container p[style*="color: red"] {
+  color: #ff6b6b !important;
+  margin-top: 10px;
+  text-align: center;
+}
