@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Services from './components/Services'; 
 import Contact from './components/Contact'; 
 import Signup from './components/Signup';
+import ApplyNow from './components/ApplyNow';
 import Login from './components/Login'; 
 import About from './components/About'; 
 import Privacy from './components/Privacy'; 
