@@ -19,7 +19,7 @@ const Dashboard = () => {
       setLoading(true);
 
       // Fetch current user
-      const userResponse = await fetch("https://myportfollio-zo2p.onrender.com//api/auth/me", {
+      const userResponse = await fetch("https://myportfollio-zo2p.onrender.com/api/auth/me", {
         credentials: "include"
       });
 
@@ -31,7 +31,7 @@ const Dashboard = () => {
       setUser(userData.user);
 
       // Fetch dashboard stats
-      const statsResponse = await fetch("https://myportfollio-zo2p.onrender.com//api/loans/dashboard/stats", {
+      const statsResponse = await fetch("https://myportfollio-zo2p.onrender.com/api/loans/dashboard/stats", {
         credentials: "include"
       });
 
@@ -40,7 +40,7 @@ const Dashboard = () => {
         setStats(statsData.stats);
       }
 
-      const loansResponse = await fetch("https://myportfollio-zo2p.onrender.com//api/loans/my-loans", {
+      const loansResponse = await fetch("https://myportfollio-zo2p.onrender.com/api/loans/my-loans", {
         credentials: "include"
       });
 
@@ -59,7 +59,7 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch("https://myportfollio-zo2p.onrender.com//api/auth/logout", {
+      await fetch("https://myportfollio-zo2p.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include"
       });

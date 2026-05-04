@@ -29,7 +29,7 @@ function ApplyNow() {
     };  
 
     try {
-        const response = await fetch('/api/submit-application', {
+        const response = await fetch('https://myportfollio-zo2p.onrender.com/api/auth/submit-application', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

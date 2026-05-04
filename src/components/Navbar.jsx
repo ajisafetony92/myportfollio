@@ -16,7 +16,7 @@ function Navbar() {
 
   const checkAuth = async () => {
     try {
-      const response = await fetch("https://myportfollio-zo2p.onrender.com//api/auth/me", {
+      const response = await fetch("https://myportfollio-zo2p.onrender.com/api/auth/me", {
         credentials: "include"
       });
 
@@ -35,7 +35,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("https://myportfollio-zo2p.onrender.com//api/auth/logout", {
+      await fetch("https://myportfollio-zo2p.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include"
       });
