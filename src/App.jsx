@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Services from './components/Services'; 
 import Contact from './components/Contact'; 
 import Signup from './components/Signup';
-import ApplyNow from './components/ApplyNow';
+import ApplyLoan from './components/ApplyLoan';
 import Login from './components/Login'; 
 import About from './components/About'; 
 import Privacy from './components/Privacy'; 
@@ -31,6 +31,7 @@ export default function App() {
           <Route path="/about" element={<About />} /> 
           <Route path="/privacy" element={<Privacy />} /> 
           <Route path="/terms" element={<Terms />} /> 
+          <Route path="/applyloan" element={<ApplyLoan />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/dashboard" element={<Dashboard />} />
