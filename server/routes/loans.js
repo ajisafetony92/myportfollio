@@ -7,13 +7,13 @@ const auth = require('../middleware/auth');
 // Apply for loan
 router.post('/apply', auth, async (req, res) => {
   try {
-    let { amount, purpose, duration, interestRate } = req.body;
+    let { name, email, amount, purpose, duration, interestRate } = req.body;
 
     amount = Number(amount);
     duration = Number(duration);
     interestRate = Number(interestRate) || 5;
 
-    if (!amount || !purpose || !duration) {
+    if (!name || !email || !amount || !purpose || !duration) {
       return res.status(400).json({ error: 'Please provide all required fields' });
     }
 

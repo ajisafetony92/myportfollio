@@ -8,9 +8,10 @@ const ApplyLoan = () => {
       const [formData, setFormData] = useState({
         name: "",
         email: "",
-        loanAmount: "",
-        loanTenure: "",
-        purposeLoan: ""
+        amount: "",
+        duration: "",
+        purpose: "",
+        interestRate: "5"
       });
       const [error, setError] = useState("");
       const [loading, setLoading] = useState(false);
@@ -26,7 +27,7 @@ const ApplyLoan = () => {
         e.preventDefault();
         setError("");
 
-        if (!formData.name || !formData.email || !formData.loanAmount || !formData.loanTenure || !formData.purposeLoan) {
+        if (!formData.name || !formData.email || !formData.amount || !formData.duration || !formData.purpose) {
           setError("Please fill in all fields");
           return;
         }
@@ -35,7 +36,7 @@ const ApplyLoan = () => {
         setLoading(true);
 
     try {
-      const response = await fetch("https://myportfollio-zo2p.onrender.com/api/auth/apply-loan", {
+      const response = await fetch("https://myportfollio-zo2p.onrender.com/api/loans/apply", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -44,9 +45,10 @@ const ApplyLoan = () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          loanAmount: formData.loanAmount,
-          loanTenure: formData.loanTenure,
-          purposeLoan: formData.purposeLoan
+          amount: Number(formData.amount),
+          duration: Number(formData.duration),
+          purpose: formData.purpose,
+          interestRate: Number(formData.interestRate)
         })
       });
 
@@ -58,7 +60,7 @@ const ApplyLoan = () => {
 
       alert("Loan application submitted successfully!");
 
-      navigate("/loans");
+      navigate(`/loans/${data.loan._id}`);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -100,33 +102,42 @@ const ApplyLoan = () => {
             <label>Loan Amount</label>
             <input
               type="number"
-              name="loanAmount"
+              name="amount"
               placeholder="Enter amount"
-              value={formData.loanAmount}
+              value={formData.amount}
               onChange={handleChange}
             />
           </div>
 
           <div className="input-group">
-             <label>Loan Tenure Type</label>
-             <select
-               name="loanTenure"
-               value={formData.loanTenure}
-               onChange={handleChange}
-            >   
-             <option value="">Select tenure type</option>
-            <option value="annual">Annual</option>
-            <option value="semiannual">Semiannual (Every 6 months)</option>
-            <option value="quarterly">Quarterly (Every 3 months)</option>
-            </select>
-         </div>
+            <label>Loan Duration (Months)</label>
+            <input
+              type="number"
+              name="duration"
+              placeholder="Enter duration in months (e.g., 12, 24, 36)"
+              value={formData.duration}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Interest Rate (%)</label>
+            <input
+              type="number"
+              name="interestRate"
+              placeholder="Enter interest rate (default: 5%)"
+              value={formData.interestRate}
+              onChange={handleChange}
+              step="0.1"
+            />
+          </div>
 
           <div className="input-group">
             <label>Purpose of Loan</label>
             <textarea
-              name="purposeLoan"
+              name="purpose"
               placeholder="Why do you need this loan?"
-              value={formData.purposeLoan}
+              value={formData.purpose}
               onChange={handleChange}
             />
           </div>
