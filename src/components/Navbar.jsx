@@ -10,7 +10,6 @@ function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     checkAuth();
   }, [location]); 
 
@@ -65,7 +64,7 @@ function Navbar() {
           </li>
 
           <li>
-            <Link to="/loans" className={isActive("/loans") ? "nav-link active" : "nav-link"}>
+            <Link to="/applyLoan" className={isActive("/applyLoan") ? "nav-link active" : "nav-link"}>
               Loans
             </Link>
           </li>
@@ -85,7 +84,7 @@ function Navbar() {
           {/* Logged-in only */}
           {user && (
             <li>
-              <Link to="/applyLoan" className={isActive("/ApplyLoan") ? "nav-link active" : "nav-link"}>
+              <Link to="/applyLoan" className={isActive("/applyLoan") ? "nav-link active" : "nav-link"}>
                 Apply Now
               </Link>
             </li>
@@ -143,7 +142,7 @@ function Navbar() {
           Home
         </Link>
 
-        <Link to="/loans" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/applyLoan" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>
           Loans
         </Link>
 
@@ -156,7 +155,7 @@ function Navbar() {
         </Link>
 
         {user && (
-          <Link to="/apply" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>
+          <Link to="/applyLoan" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>
             Apply Now
           </Link>
         )}

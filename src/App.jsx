@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import Navbar from './components/Navbar'; 
 import Services from './components/Services'; 
 import Contact from './components/Contact'; 
+import LoanDetails from './components/LoanDetails';
 import Signup from './components/Signup';
 import ApplyLoan from './components/ApplyLoan';
 import Login from './components/Login'; 
@@ -35,9 +36,16 @@ export default function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/loan/:id" element={<LoanDetails />} />
+          <Route path="/loan-details" element={<LoanDetails />} />
         </Routes> 
         <Footer /> 
       </div> 
     </Router> 
   ); 
 }; 
+// Add this import at the top with other imports
+// import EmailHistory from './components/EmailHistory';
+
+// Add this route inside <Routes>
+// <Route path="/email-history" element={<EmailHistory />} />
